@@ -1,0 +1,19 @@
+{
+  "name": "guia-hoteles",
+  "version": "1.0.0",
+  "description": "Mi primer proyecto en nodejs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DIEGOROMERO04/guia-hoteles.git"
+  },
+  "author": "Diego darp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DIEGOROMERO04/guia-hoteles/issues"
+  },
+  "homepage": "https://github.com/DIEGOROMERO04/guia-hoteles#readme"
+}
