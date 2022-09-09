@@ -5,9 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" type="text/css" href="core.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="print.css" media="print" />
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="jumbotron">
+        <h1 class="display-4">Hoteles</h1>
+    </div>
+
+    <div class="container" >
+        <div class="row">
+            <div class="col-sm">
+                <p>Titulo</p>
+                <p>Hotel 1</p>
+                <p>Hotel 2</p>
+                <p>Hotel 3</p>
+            </div>
+            <div class="col-sm">
+                <p>Descripción </p>
+                <p>Descripción 1</p>
+                <p>Descripción 2</p>
+                <p>Descripción 3</p>
+            </div>
+            <div class="col-sm">
+                <p>Caracteristicas</p>
+                <p>Caracteristicas 1</p>
+                <p>Caracteristicas 2</p>
+                <p>Caracteristicas 3</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">boton</a>
+    </p>
+   
     <script src="node_modules/jquery/dist/jquery.min.js""></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
