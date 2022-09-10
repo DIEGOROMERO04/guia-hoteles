@@ -6,9 +6,9 @@
     <title>Bootstrap demo</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" >
     <link href="css/main.css" rel="stylesheet" >
-    
+    <!--
     <link rel="stylesheet" type="text/css" href="core.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="print.css" media="print" />-->
   </head>
   <body>
     <div class="jumbotron">
@@ -16,6 +16,7 @@
     </div>
 
     <div class="container">
+
         <div class="row">
             <div class="col-sm-4">
                 <p>
@@ -38,67 +39,119 @@
         </div>
 
         <div class="d-flex flex-wrap flex-row-reverse">
-            <div class="col-sm-3">
-                <h3>Hotel Mexico</h3>
-                <p>Centro cdmx</p>
-                <button class="btn btn-primary">Reservar</button>
+
+            <div class="card-hotel d-flex flex-column justify-content-between">
+                <div>
+                    <h3>Hotel Mexico</h3>
+                    <p>Centro cdmx</p>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-reversa">Reservar</button>
+                </div>
+            </div> 
+            
+            <div class="card-hotel d-flex flex-column justify-content-between">
+                <div>
+                    <h3>Hotel Argentina</h3>
+                    <p>Centro de argentina</p>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-reversa">Reservar</button>
+                </div>
             </div>
-            <div class="col-sm-3">
-                <h3>Hotel Argentina</h3>
-                <p>Centro de argentina</p>
-                <button class="btn btn-primary">Reservar</button>
+
+            <div class="card-hotel d-flex flex-column justify-content-between">
+                <div>
+                    <h3>Hotel Colombia</h3>
+                    <p>Centro colombia</p>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-reversa">Reservar</button>
+                </div>
             </div>
-            <div class="col-sm-3">
-                <h3>Hotel Colombia</h3>
-                <p>Centro colombia</p>
-                <button class="btn btn-primary">Reservar</button>
+
+            <div class="card-hotel d-flex flex-column justify-content-between">
+                <div>
+                    <h3>Hotel Francia</h3>
+                    <p>Centro francia</p>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-reversa">Reservar</button>
+                </div>
             </div>
-            <div class="col-sm-3">
-                <h3>Hotel Francia</h3>
-                <p>Centro francia</p>
-                <button class="btn btn-primary">Reservar</button>
+
+            <div class="card-hotel d-flex flex-column justify-content-between">
+                <div>
+                    <h3>Hotel Francia</h3>
+                    <p>Centro francia</p>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-reversa">Reservar</button>
+                </div>
             </div>
-            <div class="col-sm-3">
-                <h3>Hotel Francia</h3>
-                <p>Centro francia</p>
-                <button class="btn btn-primary">Reservar</button>
+
+            <div class="card- d-flex flex-column justify-content-between">
+                <div>
+                    <h3>Hotel Francia</h3>
+                    <p>Centro francia</p>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-reversa">Reservar</button>
+                </div>
             </div>
-            <div class="col-sm-3">
-                <h3>Hotel Francia</h3>
-                <p>Centro francia</p>
-                <button class="btn btn-primary">Reservar</button>
+
+            <div class="card-hotel d-flex flex-column justify-content-between">
+                <div>
+                    <h3>Hotel Francia</h3>
+                    <p>Centro francia</p>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-reversa">Reservar</button>
+                </div>
             </div>
-            <div class="col-sm-3">
-                <h3>Hotel Francia</h3>
-                <p>Centro francia</p>
-                <button class="btn btn-primary">Reservar</button>
-            </div>
-            <div class="col-sm-3">
-                <h3>Hotel Francia</h3>
-                <p>Centro francia</p>
-                <button class="btn btn-primary">Reservar</button>
+
+            <div class="card-hotel d-flex flex-column justify-content-between">
+                <div>
+                    <h3>Hotel Francia</h3>
+                    <p>Centro francia</p>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-reversa">Reservar</button>
+                </div>
+               
             </div>
         </div>
-        
     </div>
+  
+
+
+
 <footer>
-    <div class="col-sm-4">
-        <a href="http://www.facebook.com" >Facebook</a>
-        <a href="http://www.twitter.com" >Twitter</a>
-        <a href="http://www.instagram.com" >Instagram</a>
+    <div class="row">
+        <div class="col-sm-4 d-flex flex-column">
+            <a href="http://www.facebook.com" >Facebook</a>
+            <a href="http://www.twitter.com" >Twitter</a>
+            <a href="http://www.instagram.com" >Instagram</a>
+        </div>
+        <div class="col-sm-4">
+            <address>
+                <h3>Casa</h3>
+                <p>ixtapaluca, EDOMEX, Mexico</p>
+                <p>+525555555 </p>
+                <p>e-mail: al2182001629@azc.uam.mx</p>
+            </address>
+        </div>
+        <div class="col-sm-4 d-flex flex-column align-items-end">
+            <a href="http://www.facebook.com" >Nosotros</a>
+            <a href="http://www.twitter.com" >Precios</a>
+            <a href="http://www.instagram.com" >Terminos y condiciones</a>
+        </div>
     </div>
-    <div class="col-sm-4">
-        <address>
-            ixtapaluca, EDOMEX, Mexico
-            +525555555 
-            e-mail: al2182001629@azc.uam.mx
-        </address>
-    </div>
-    <div class="col-sm-4"></div>
+    
 </footer>
    
     <script src="node_modules/jquery/dist/jquery.min.js""></script>
-    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
