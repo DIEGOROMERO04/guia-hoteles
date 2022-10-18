@@ -1,7 +1,7 @@
 .jumbotron {
     background-color: yellow;
     color: black;
-    margin-top: 75px;
+    margin-top: 100px;
 }
 
 footer {
@@ -25,4 +25,8 @@ footer {
 
 .footer-icon{
     padding-right: 10px;
+}
+
+.tab-content {
+    padding-top: 10px;
 }
