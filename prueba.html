@@ -1,0 +1,138 @@
+<?php 
+include_once 'alumno.php';
+?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nuevo Mensaje</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/addm.css" rel="stylesheet">
+   
+  </head>
+
+  <body>
+ 
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #de0f2b;">
+        <a class="navbar-brand" href="#">Mensaje</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item"> <a class="nav-link " href="index.php">Home</a></li>
+
+                <li class="nav-item"> <a class="nav-link active" href="addMensaje.php">Nuevo Mensaje</a></li>
+
+                <li class="nav-item"> <a class="nav-link" href="editarmensaje.php">Editar Mensaje</a></li>
+
+                <li class="nav-item"> <a class="nav-link" href="eliminarmensaje.php">Eliminar Mensaje</a></li>
+
+                <li class="nav-item"> <a class="nav-link" href="mensajes.php">Mensajes</a></li>
+
+
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="jumbotron">
+        <h1>Mensaje</h1>
+    </div>  
+
+    <div class="container">
+
+        <form>
+        <h1>Mensaje Nuevo</h1>
+
+            <div class="form-row">
+                <div class="form-group col-md-6 ">
+                        <label for="titulo">Titulo</label>
+                        <input type="text" class="form-control" id="titulo" placeholder="Titulo">
+                </div>
+
+                <div class="form-group col-md-6">
+                <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" rows="5" cols="50" class="form-control"> </textarea>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <fieldset>
+                        <legend>Tipo de Mensaje</legend>
+                        <br>
+                    <label>
+                        <input type="radio" name="tipo" value="1"> Actividades Deportivas
+                    </label>
+                        <br>
+                    <label>
+                        <input type="radio" name="tipo" value="2"> Actividades Culturales
+                    </label>
+                    <br>
+                    <label>
+                    Academicas
+                    </label>
+                    <br>
+                    <label>
+                    <input type="radio" name="tipo" value="3"> Por división
+                        <select class="form-select col-md-6" aria-label="Default">
+                            <option selected>Seleccione</option>
+                            <?php
+                                $alumno = new Alumno();
+                                $data = $alumno -> division();
+                                foreach ($data as $valores):
+                                    echo '<option value="3">'.$valores["nombre"].' ('.$valores["abrev"].')'.'</option>';
+                                endforeach;
+                            ?>
+                        </select>
+                    </label>
+
+                    <br>
+                    <label>
+                    <input type="radio" name="tipo" value="4"> Por carrera
+                        <select class="form-select col-md-6" aria-label="Default">
+                            <option selected>Seleccione</option>
+                            <?php
+                                $alumno = new Alumno();
+                                $data = $alumno -> carrera();
+                                foreach ($data as $valores):
+                                    echo '<option value="4">'.$valores["nombre"].'</option>';
+                                endforeach;
+                            ?>
+                        </select>
+
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="tipo" value="5"> BECAS
+                    </label>
+                        <br>
+                    <label>
+                        <input type="radio" name="tipo" value="6"> Convocatoria de los acuerdos del rector
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="tipo" value="7"> Sistemas Escolares
+                    </label>
+                    <br>
+                   
+
+                    </fieldset>
+
+                </div>
+
+
+                <div class="form-group col-md-6">
+                <button class="btn btn-primary btn-guardar">CREAR</button>
+                </div>
+                
+
+
+            </div>
+    </div>
+
+</body>
+</html>

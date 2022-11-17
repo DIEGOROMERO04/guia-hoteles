@@ -51,24 +51,27 @@
         </nav>
 
         <div class="row">
-            <div class="col-sm-4" >
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#funciona" aria-expanded="false" aria-controls="multicollapse1">
+            <div class="col-sm-4">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#funciona"
+                    aria-expanded="false" aria-controls="multicollapse1">
                     ¿Cómo funciona?
-                  </button>
+                </button>
             </div>
-            <div class="col-sm-4" >
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#reserva" aria-expanded="false" aria-controls="multicollapse2">
+            <div class="col-sm-4">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#reserva"
+                    aria-expanded="false" aria-controls="multicollapse2">
                     ¿Dónde puedo reservar?
-                  </button>
+                </button>
             </div>
-            <div class="col-sm-4" >
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#pago" aria-expanded="false" aria-controls="multicollapse3">
+            <div class="col-sm-4">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#pago"
+                    aria-expanded="false" aria-controls="multicollapse3">
                     ¿Cómo pago?
-                  </button>
+                </button>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row tab-content" >
             <div class="col-sm-4 collapse multi-collapse" id="funciona">
                 <p>
                 <h3>¿Cómo funciona?</h3>
@@ -90,14 +93,39 @@
         </div>
 
 
-        <img class="img-fluid" src="images/promo.png" alt="responsive img">
+
+        <!--<img class="img-fluid" src="images/promo.png" alt="responsive img"> -->
+
+        <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="100">
+                    <img src="images/hotel1.png" class="d-block w-100"width="100" height="400" alt="Primer slide">
+                </div>
+                <div class="carousel-item" data-bs-interval="100">
+                    <img src="images/hotel2.png" class="d-block w-100"width="100" height="400" alt="Segundo slide">
+                </div>
+                <div class="carousel-item" data-bs-interval="100">
+                    <img src="images/hotel3.png" class="d-block w-100"width="100" height="400" alt="Tercer slide">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+        </div>
+
 
         <div class="d-flex flex-wrap flex-row-reverse">
 
             <div class=" card card-hotel d-flex flex-column justify-content-between ">
                 <img class="card-img-top" src="images/hotel.png" alt="hotel img">
                 <div class="card-body">
-                    <h5 class="card-title">Hotel Mexico</h5>
+                    <h5 class="card-title" data-bs-toggle="popover" title="Promociones"
+                        data-bs-content="Consulta las promociones vigentes">Hotel Mexico</h5>
                     <h6 class="card-subtitle text-muted"> Mexico</h6>
                     <p class="card-text">Centro cdmx</p>
                 </div>
@@ -109,7 +137,8 @@
             <div class="card card-hotel d-flex flex-column justify-content-between">
                 <img class="card-img-top" src="images/hotel.png" alt="hotel img">
                 <div class="card-body">
-                    <h5 class="card-title">Hotel Argentina</h5>
+                    <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Las primeras reservas cuentan con clases de tango gratis!">Hotel Argentina</h5>
                     <h6 class="card-subtitle text-muted"> argentina</h6>
                     <p class="card-text">Centro de argentina</p>
                 </div>
@@ -121,7 +150,8 @@
             <div class=" card card-hotel d-flex flex-column justify-content-between">
                 <img class="card-img-top" src="images/hotel.png" alt="hotel img">
                 <div class="card-body">
-                    <h5 class="card-title">Hotel Colombia</h5>
+                    <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="colombia es chido">
+                        Hotel Colombia</h5>
                     <h6 class="card-subtitle text-muted"> colombia</h6>
                     <p class="card-text">Centro colombia</p>
                 </div>
@@ -133,7 +163,8 @@
             <div class=" card card-hotel d-flex flex-column justify-content-between">
                 <img class="card-img-top" src="images/hotel.png" alt="hotel img">
                 <div class="card-body">
-                    <h5 class="card-title">Hotel Francia</h5>
+                    <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="el pais del amor">
+                        Hotel Francia</h5>
                     <h6 class="card-subtitle text-muted"> francia</h6>
                     <p class="card-text">Centro francia</p>
                 </div>
@@ -145,7 +176,8 @@
             <div class="card card-hotel d-flex flex-column justify-content-between">
                 <img class="card-img-top" src="images/hotel.png" alt="hotel img">
                 <div class="card-body">
-                    <h5 class="card-title">Hotel Francia</h5>
+                    <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="x2">Hotel Francia
+                    </h5>
                     <h6 class="card-subtitle text-muted"> francia</h6>
                     <p class="card-text">Centro francia</p>
                 </div>
@@ -157,7 +189,8 @@
             <div class="card card-hotel d-flex flex-column justify-content-between">
                 <img class="card-img-top" src="images/hotel.png" alt="hotel img">
                 <div class="card-body">
-                    <h5 class="card-title">Hotel Francia</h5>
+                    <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="francia otra vex">
+                        Hotel Francia</h5>
                     <h6 class="card-subtitle text-muted"> francia</h6>
                     <p class="card-text">Centro francia</p>
                 </div>
@@ -169,7 +202,8 @@
             <div class="card card-hotel d-flex flex-column justify-content-between">
                 <img class="card-img-top" src="images/hotel.png" alt="hotel img">
                 <div class="card-body">
-                    <h5 class="card-title">Hotel Francia</h5>
+                    <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Promocion hotel mas barato">Hotel Francia</h5>
                     <h6 class="card-subtitle text-muted"> francia</h6>
                     <p class="card-text">Centro francia</p>
                 </div>
@@ -181,17 +215,52 @@
             <div class=" card card-hotel d-flex flex-column justify-content-between">
                 <img class="card-img-top" src="images/hotel.png" alt="hotel img">
                 <div class="card-body">
-                    <h5 class="card-title">Hotel Francia</h5>
+                    <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="el mejor hotel">Hotel
+                        Francia</h5>
                     <h6 class="card-subtitle text-muted"> francia</h6>
                     <p class="card-text">Centro francia</p>
+                    <button class="btn btn-outline-success " data-bs-toggle="modal"
+                        data-bs-target="#contacto">Contacto</button>
                 </div>
                 <div>
-                    <button class="btn btn-primary btn-reversa">Reservar</button>
-                </div>
+                    <button class="btn btn-primary btn-reversa" data-bs-toggle="popover" title="Promociones"
+                        data-bs-content="Consulta las promociones vigentes">Reservar</button>
 
+                </div>
             </div>
         </div>
+
+        <div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Contacto con el hotel</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <span arial-hidden="true">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Tu email: </label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="col-form-label">Mensaje: </label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
+
 
 
 
@@ -215,6 +284,7 @@
                 <a href="http://www.facebook.com">Nosotros</a>
                 <a href="http://www.twitter.com">Precios</a>
                 <a href="http://www.instagram.com">Terminos y condiciones</a>
+
             </div>
         </div>
 
@@ -223,6 +293,25 @@
     <script src="node_modules/jquery/dist/jquery.min.js""></script>
     <script src=" node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+
+
+
+    </script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
 
 
 
