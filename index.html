@@ -96,15 +96,16 @@
 
         <!--<img class="img-fluid" src="images/promo.png" alt="responsive img"> -->
 
+        <!--EL carousel y con controles y se cambia la velocidad con data-bs-interval-->
         <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="100">
+                <div class="carousel-item active" data-bs-interval="1000">
                     <img src="images/hotel1.png" class="d-block w-100"width="100" height="400" alt="Primer slide">
                 </div>
-                <div class="carousel-item" data-bs-interval="100">
+                <div class="carousel-item" data-bs-interval="1000">
                     <img src="images/hotel2.png" class="d-block w-100"width="100" height="400" alt="Segundo slide">
                 </div>
-                <div class="carousel-item" data-bs-interval="100">
+                <div class="carousel-item" data-bs-interval="1000">
                     <img src="images/hotel3.png" class="d-block w-100"width="100" height="400" alt="Tercer slide">
                 </div>
             </div>
@@ -120,7 +121,7 @@
 
 
         <div class="d-flex flex-wrap flex-row-reverse">
-
+<!--Aqui se usa popover-->
             <div class=" card card-hotel d-flex flex-column justify-content-between ">
                 <img class="card-img-top" src="images/hotel.png" alt="hotel img">
                 <div class="card-body">
@@ -133,7 +134,7 @@
                     <button class="btn btn-primary btn-reversa">Reservar</button>
                 </div>
             </div>
-
+<!--Aqui se usa tooltip-->
             <div class="card card-hotel d-flex flex-column justify-content-between">
                 <img class="card-img-top" src="images/hotel.png" alt="hotel img">
                 <div class="card-body">
@@ -219,6 +220,7 @@
                         Francia</h5>
                     <h6 class="card-subtitle text-muted"> francia</h6>
                     <p class="card-text">Centro francia</p>
+                    <!--Boton de modal-->
                     <button class="btn btn-outline-success " data-bs-toggle="modal"
                         data-bs-target="#contacto">Contacto</button>
                 </div>
@@ -230,6 +232,7 @@
             </div>
         </div>
 
+        <!--Aqui esta el modal-->
         <div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
