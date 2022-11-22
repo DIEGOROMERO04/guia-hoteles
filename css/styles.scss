@@ -1,0 +1,40 @@
+$colorrojo: #de0f2b;
+$amarillo: #DDF60D;
+$verde: #5EF60D;
+
+@mixin margenes($top,$bottom,$color) {
+    margin-bottom: $bottom;
+    margin-top: $top;
+    background-color: $color;
+    
+}
+
+.jumbotron {
+    color: black;
+    @include margenes(50px,0px,$colorrojo);
+}
+
+footer {
+    padding: 10px 10px 0 10px;
+    @include margenes(10px,0px,$amarillo);
+}
+
+.card-hotel {
+    flex: 1 200px;
+    @include margenes(10px,2px,$verde);
+}
+
+.btn-reversa{
+    width: 100%;
+    border-radius: 0px;
+
+}
+
+.footer-icon{
+    padding-right: 10px;
+}
+
+.tab-content {
+    padding-top: 10px;
+    background-color: $verde;
+}
