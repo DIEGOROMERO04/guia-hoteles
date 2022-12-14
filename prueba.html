@@ -1,6 +1,12 @@
 <?php 
 include_once 'alumno.php';
+
+print_r($_POST);
+
 ?>
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -41,99 +47,61 @@ include_once 'alumno.php';
     </nav>
 
 
-    <div class="jumbotron">
-        <h1>Mensaje</h1>
-    </div>
+
 
     <div class="container">
-
-        <form>
-            <h1>Mensaje Nuevo</h1>
-
-            <div class="form-row">
-                <div class="form-group col-md-6 ">
-                    <label for="titulo">Titulo</label>
-                    <input type="text" class="form-control" id="titulo" placeholder="Titulo">
-                </div>
-
-                <div class="form-group col-md-6">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea name="mensaje" rows="5" cols="50" class="form-control"> </textarea>
-                </div>
-
-                <div class="form-group col-md-6">
-                    <fieldset>
-                        <legend>Tipo de Mensaje</legend>
-                        <br>
-                        <label>
-                            <input type="radio" name="tipo" value="1"> Actividades Deportivas
-                        </label>
-                        <br>
-                        <label>
-                            <input type="radio" name="tipo" value="2"> Actividades Culturales
-                        </label>
-                        <br>
-                        <label>
-                            Academicas
-                        </label>
-                        <br>
-                        <label>
-                            <input type="radio" name="tipo" value="3"> Por división
-                            <select class="form-select col-md-6" aria-label="Default">
-                                <option selected>Seleccione</option>
-                                <?php
-                                $alumno = new Alumno();
-                                $data = $alumno -> division();
-                                foreach ($data as $valores):
-                                    echo '<option value="3">'.$valores["nombre"].' ('.$valores["abrev"].')'.'</option>';
-                                endforeach;
-                            ?>
-                            </select>
-                        </label>
-
-                        <br>
-                        <label>
-                            <input type="radio" name="tipo" value="4"> Por carrera
-                            <select class="form-select col-md-6" aria-label="Default">
-                                <option selected>Seleccione</option>
-                                <?php
-                                $alumno = new Alumno();
-                                $data = $alumno -> carrera();
-                                foreach ($data as $valores):
-                                    echo '<option value="4">'.$valores["nombre"].'</option>';
-                                endforeach;
-                            ?>
-                            </select>
-
-                        </label>
-                        <br>
-                        <label>
-                            <input type="radio" name="tipo" value="5"> BECAS
-                        </label>
-                        <br>
-                        <label>
-                            <input type="radio" name="tipo" value="6"> Convocatoria de los acuerdos del rector
-                        </label>
-                        <br>
-                        <label>
-                            <input type="radio" name="tipo" value="7"> Sistemas Escolares
-                        </label>
-                        <br>
-
-
-                    </fieldset>
-
-                </div>
-
-
-                <div class="form-group col-md-6">
-                    <button class="btn btn-primary btn-guardar">CREAR</button>
-                </div>
-
-
-
+        <div class="jumbotron" style="margin-top: 100px;">
+            <h1>Mensaje</h1>
+        </div>
+        <form class="was-validated" action="prueba.html" method="POST">
+            <div class="mb-3">
+                <input type="file" class="form-control" aria-label="file example" name='archivo'required>
             </div>
+
+            <div class="mb-3">
+                <button class="btn btn-primary" type="submit" name="enviar">Enviar formulario</button>
+            </div>
+
+
+        </form>
+
     </div>
+
+<?php 
+print_r($_REQUEST);
+
+
+//Si se quiere subir una imagen
+if (isset($_FILES['archivo'])) {
+$file=$_FILES['archivo'];
+$filename=$file['name'];
+$mimetype=$file['type'];
+
+
+$allowed_types = array("image/jpg","image/jpeg","image/png");
+
+if(!in_array($mimetype,$allowed_types)){
+header("Location:addMensaje.php");   
+}
+
+if(!is_dir("imagenes")){
+    mkdir("imagenes",0777);
+}
+move_uploaded_file($file['tmp_name'],'imagenes/'.$filename);
+}else {
+//header("Location:addMensaje.php");   
+}
+?>
+
+<script>
+    var fileInput = document.getElementById("enviar");
+    var filestatus = document.querySelector(".file-status");
+
+    fileInput.addEventListener('change',function(){
+        filestatus.textContent = this.files[0].name;
+    });
+
+</script>
 
 </body>
 

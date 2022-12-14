@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
 
-                <li class="nav-item"> <a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"> <a class="nav-link active" href="index.html">Home</a></li>
 
                 <li class="nav-item"> <a class="nav-link" href="about.html">Nosotros</a></li>
 
@@ -221,7 +221,7 @@
                     <h6 class="card-subtitle text-muted"> francia</h6>
                     <p class="card-text">Centro francia</p>
                     <!--Boton de modal-->
-                    <button class="btn btn-outline-success " data-bs-toggle="modal" id="contactoBtn"
+                    <button class="btn btn-outline-success " data-bs-toggle="modal" id="contactoBtn" style="background-color: blue;";
                         data-bs-target="#contacto">Contacto</button>
                 </div>
                 <div>
@@ -322,6 +322,7 @@
 
             $("#contactoBtn").removeClass('btn-outline-success');
             $("#contactoBtn").addClass('btn-primary');
+            $("#contactoBtn").css('background', 'red');
             $("#contactoBtn").prop('disabled',true);
 
 
@@ -341,6 +342,8 @@
         const myModalE4 = document.getElementById('contacto')
         myModalEl.addEventListener('hidden.bs.modal', event => {
             console.log("El modal contacto se ocultó");
+            
+            $("#contactoBtn").css('background', 'blue');
             $("#contactoBtn").prop('disabled',false);
         })
     </script>

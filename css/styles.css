@@ -9,7 +9,9 @@ footer {
   margin-bottom: 0px;
   margin-top: 10px;
   background-color: #DDF60D; }
-
+  .espacio{
+    margin-top: 50px;
+}
 .card-hotel {
   flex: 1 200px;
   margin-bottom: 2px;
