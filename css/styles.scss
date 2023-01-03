@@ -1,6 +1,6 @@
 $colorrojo: #de0f2b;
 $amarillo: #DDF60D;
-$verde: #5EF60D;
+$verde: #5EF6ff;
 
 @mixin margenes($top,$bottom,$color) {
     margin-bottom: $bottom;
@@ -10,7 +10,7 @@ $verde: #5EF60D;
 }
 
 .jumbotron {
-    color: black;
+    color: $amarillo;
     @include margenes(50px,0px,$colorrojo);
 }
 
